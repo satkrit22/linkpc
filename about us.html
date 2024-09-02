@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+    <section id="about" class="about-section">
+        <div class="content-container">
+            <h2>About Link PC & Link PC Plus</h2>
+            <p>Link PC & Link PC Plus are thin client devices, a streamlined computing solution designed to provide a cost-effective, 
+                efficient, and secure computing environment. Thin clients are minimalistic hardware devices that rely on a 
+                central server for processing power and storage, allowing for a more centralized and manageable IT infrastructure.</p>
+        </div>
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="/assets/img/Untitled-1.png" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="assets/img/Port 1 copy.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="assets/img/Port 2 copy.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="assets/img/Port 3 copy.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">               
+                <img src="assets/img/Link PC copy.jpg" style="width:100%">  
+            </div>
+
+            <div class="mySlides fade">                   
+                <img src="assets/img/Spec copy.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="assets/img/linkpc+.jpg" style="width:100%">
+            </div>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+    </section>
+            <script >
+           let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+            </script>
+        
+        
+        </section>
+</body>
+</html>
